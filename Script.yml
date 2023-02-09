@@ -1,14 +1,19 @@
----
-- name: Display current date and time in IST and one hour ahead time
-  hosts: localhost
-  tasks:
-    - name: Get current time and date
-      command: date +%Y-%m-%dT%T%z
-    - name: Display current time and date
-      debug:
-        msg: The current date and time in IST is {{ lookup('pipe', 'date +%Y-%m-%dT%T%z') }}
-    - name: Get one hour ahead time
-      command: date --date='1 hour' +%Y-%m-%dT%T%z
-    - name: Display one hour ahead time
-      debug:
-        msg: One hour ahead time in IST is {{ lookup('pipe', 'date --date=''1 hour''+%Y-%m-%dT%T%z') }}
+pipeline {
+    agent {
+        label 'master'
+    }
+    stages {
+        stage('Display Current Date and Time') {
+            steps {
+                sh 'date +%Y-%m-%dT%T%z'
+                echo "The current date and time in IST is: $(date +%Y-%m-%dT%T%z)"
+            }
+        }
+        stage('Display One Hour Ahead Time') {
+            steps {
+                sh 'date --date=''1 hour'' +%Y-%m-%dT%T%z'
+                echo "One hour ahead time in IST is: $(date --date=''1 hour'' +%Y-%m-%dT%T%z)"
+            }
+        }
+    }
+}
