@@ -1,18 +1,10 @@
 pipeline {
-    agent {
-        label 'master'
-    }
+    agent any
+
     stages {
-        stage('Display Current Date and Time') {
+        stage('Hello') {
             steps {
-                sh 'date +%Y-%m-%dT%T%z'
-                echo "The current date and time in IST is: $(date +%Y-%m-%dT%T%z)"
-            }
-        }
-        stage('Display One Hour Ahead Time') {
-            steps {
-                sh 'date --date=''1 hour'' +%Y-%m-%dT%T%z'
-                echo "One hour ahead time in IST is: $(date --date=''1 hour'' +%Y-%m-%dT%T%z)"
+                echo 'Hello World'
             }
         }
     }
