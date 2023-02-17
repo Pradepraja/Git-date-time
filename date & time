@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    stages {
         stage('Display current time and date in IST') {
             steps {
                 sh '''#!/bin/bash
