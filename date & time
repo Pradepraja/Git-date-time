@@ -8,7 +8,7 @@ pipeline {
                     export TZ
                     current_time=$(date +%T)
                     current_date=$(date +%F)
-                    echo "Current time and date in IST: $current_date $current_time.
+                    echo "Current time and date in IST: $current_date $current_time"
                 '''
             }
         }
