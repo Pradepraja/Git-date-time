@@ -97,3 +97,9 @@ fi
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
+export MAVEN_HOME=/opt/apache-maven-3.9.1
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/apache-maven-3.9.1/bin:/opt/apache-maven-3.9.1/bin
+export MAVEN_HOME=/opt/apache-maven-3.9.1
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/apache-maven-3.9.1/bin:/opt/apache-maven-3.9.1/bin:/opt/apache-maven-3.9.1/bin:/opt/apache-maven-3.9.1/bin
+export MAVEN_HOME=/opt/apache-maven-3.9.1
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/apache-maven-3.9.1/bin:/opt/apache-maven-3.9.1/bin:/opt/apache-maven-3.9.1/bin:/opt/apache-maven-3.9.1/bin:/opt/apache-maven-3.9.1/bin:/opt/apache-maven-3.9.1/bin
