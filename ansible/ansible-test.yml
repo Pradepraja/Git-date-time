@@ -1,0 +1,16 @@
+---
+- name: Create folder
+  hosts: webserver
+  become: yes
+
+  vars:
+    folder_name: Ansible
+    folder_path: /home/pradep
+
+  tasks:
+    - name: Create folder
+      file:
+        path: "{{ folder_path }}/{{ folder_name }}"
+        state: directory
+        mode: '0755'
+
